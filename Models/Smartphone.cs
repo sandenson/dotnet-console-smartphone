@@ -3,22 +3,26 @@ namespace DesafioPOO.Models
     public abstract class Smartphone
     {
         public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+        protected string Modelo;
+        protected string IMEI;
+        protected int Memoria; // estou tratando a memória como o armazenamento interno, ao invés da RAM
 
-        public Smartphone(string numero)
+        public Smartphone(string numero, string modelo, string imei, int memoria)
         {
             Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
+            Modelo = modelo;
+            IMEI = imei;
+            Memoria = memoria;
         }
 
         public void Ligar()
         {
-            Console.WriteLine("Ligando...");
+            Console.WriteLine("\nLigando...");
         }
 
         public void ReceberLigacao()
         {
-            Console.WriteLine("Recebendo ligação...");
+            Console.WriteLine("\nRecebendo ligação...");
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
